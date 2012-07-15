@@ -65,7 +65,7 @@ typedef long _off_t;
 #define _OFF_T_DEFINED
 #endif
 
-struct stat
+struct _stat
 {
 	_dev_t			st_dev;
 	_ino_t			st_ino;
@@ -81,7 +81,7 @@ struct stat
 };
 
 
-int __cdecl stat(const char *filename, struct stat *buf);
+int __cdecl _stat(const char *filename, struct stat *buf);
 
 
 #ifdef __cplusplus
